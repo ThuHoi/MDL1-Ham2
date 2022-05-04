@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ thống quản lý sản phẩm</title>
+</head>
+<body>
+<div align="center">
+<h1>Manager product</h1>
+<input placeholder="name Product" id="nameP">
+<button>Add Product</button>
+</div>
+</body>
+</html>
+<script>
+    let products = [BMN]
+
+    function  creat() {
+        let name = document.getElementById('nameP').value;
+        products.push(name);
+        console.log(products);
+        show()
+    }
+
+    function show() {
+        let tr = ""
+        for (let i = 0; i < products.length; i++) {
+            str += "<tr>"
+            str += "<td>${i + 1}</td>"
+            str += "<td>${products[i]}</td>"
+            str += "<td><button>Edit</button></td>>"
+            str += "<td><button>Delete</button></td>>"
+            str += "</tr>"
+        }
+    }
+</script>

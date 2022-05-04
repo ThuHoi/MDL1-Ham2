@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+
+Nhập : <input id="nhap" type="number" onchange="feet()">
+<p>Result:<span id="kq"></span></p>
+<input type="button" value="feet to meters" onclick="feet()">
+<input type="button" value="meters to feet" onclick="mets()">
+</body>
+</html>
+<script>
+    function feet() {
+        let met = 0.305 * document.querySelector("#nhap").value
+        document.querySelector("#kq").innerHTML = met
+    }
+
+    function mets() {
+        let feet = 3.279 * document.querySelector("#nhap").value
+        document.querySelector("#kq").innerHTML = feet;
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm số nguyên</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let n = +prompt("Nhập vào số nhỏ hơn 10000");
+
+    function soNguyenTo(n) {
+        if (n < 2)
+            return false;
+        else {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    if (soNguyenTo(n) === true) {
+        alert('Số ' + n + ' là số nguyên tố');
+    } else {
+        alert('Số ' + n + ' không là số nguyên tố')
+    }
+</script>
